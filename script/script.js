@@ -9,6 +9,6 @@ window.onscroll = () => {
 const navLinks = document.querySelectorAll('.nav-item')
 const menuToggle = document.getElementById('navbarSupportedContent')
 
-navLinks.forEach((l) => {
-    l.addEventListener('click', () => { new bootstrap.Collapse(menuToggle).toggle() })
-})
+// navLinks.forEach((l) => {
+//     l.addEventListener('click', () => { new bootstrap.Collapse(menuToggle).toggle() })
+// })
