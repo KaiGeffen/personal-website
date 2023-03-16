@@ -1,3 +1,11 @@
+/* Links */
+a:link, :visited, :active {
+  color: black;
+}
+a:hover {
+    color: #008000 !important;
+}
+
 /* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
     background-color: rgba(0, 0, 0, 0);
@@ -69,6 +77,10 @@
 }
 .fab {
     color: #000000;
+}
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
 }
 /* footer styling */
 #footer {
