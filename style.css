@@ -1,8 +1,8 @@
 /* Links */
-a:link, :visited, :active {
+.credits:link, :visited, :active {
   color: black;
 }
-a:hover {
+.credits:hover {
     color: #008000 !important;
 }
 
