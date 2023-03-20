@@ -3,7 +3,8 @@ const header = document.querySelector('.navbarDark')
 const header_text = document.querySelectorAll('.header-text')
 
 function refreshHeader() {
-    const top = window.scrollY
+    const top = window.innerWidth >= 1000 ? window.scrollY : 100
+    
     header.style.backgroundColor = `rgba(0, 0, 0, ${top/100})`
     header_text.forEach(element => {
         const val = top * 255 / 100
