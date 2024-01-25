@@ -2,4 +2,4 @@
 _site/
 
 # Typical ignores
-package-lock.json
+node_modules/
