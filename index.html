@@ -4,20 +4,28 @@
   <title>Kai Geffen</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- linking css file -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Icon -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <!-- bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" />
+
+    <!-- linking css file -->
+    <link rel="stylesheet" href="/style.css">
+  
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll navbarDark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll navbarDark bg-dark">
         <div class="container">
-            <a class="navbar-brand header-text" href="#">Kai</a>
+            <a class="navbar-brand header-text" href="#home">Kai</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,10 +35,10 @@
                         <a class="nav-link header-text" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link header-text" href="#about">About</a>
+                        <a class="nav-link header-text" href="#bio">Bio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link header-text" href="#services">Skills</a>
+                        <a class="nav-link header-text" href="#blog">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link header-text" href="#portfolio">Portfolio</a>
@@ -38,8 +46,7 @@
                     <li class="nav-item">
                         <a class="nav-link header-text" href="#contact">Contact</a>
                     </li>
-                </ul>
-                
+                </ul>    
             </div>
         </div>
     </nav>
@@ -48,20 +55,20 @@
         <div class="container-fluid">
             <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                <h2 class="hero_title">Hi, I'm Kai Geffen</h2>
-                <p class="hero_desc">Software engineer</p>
+                <h2 class="hero_title">Kai Geffen</h2>
+                <p class="hero_subtitle">software engineer</p>
             </div>
             </div>
         </div>
     </section>
 
-    <!-- about section-->
-    <section id="about">
+    <!-- Bio section-->
+    <section id="bio">
         <div class="container mt-4 pt-4">
-            <h1 class="text-center">About Me</h1>
+            <h1 class="text-center">Bio</h1>
             <div class="row mt-4">
                 <div class="col-lg-4">
-                    <img src="images/about.jpeg" class= "imageAboutPage" alt="">
+                    <img src="/images/bio.jpg" class= "imageBioPage" alt="">
                 </div>
 
                 <div class="col-lg-8">
@@ -75,86 +82,37 @@
                             <li>Associate's of Science in Mechanical Engineering (<i>Greenfield Community College</i>)</li>
                         </ul>
                     </div>
-                    <a href="Resume.pdf" class="btn btn-success" target="_blank">Full CV</a>
-                    <!-- <div class="row mt-3">
-                        <p>Outside of my profession, I enjoy rock-climbing, competitive card games, capoeira, intentional communities, Miyazaki movies, 
-                        </p>
-                    </div> -->
+                    <div class="text-center">
+                        <div class="social-icons mt-4">
+                            <a href="https://www.twitter.com/kai_geffen" target="_blank"><i class="fab large fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/kai-geffen/" target="_blank"><i class="fab large fa-linkedin"></i></a>
+                            <a href="https://github.com/KaiGeffen/" target="_blank"><i class="fab large fa-github"></i></a>
+                            <a href="Resume.pdf" target="_blank" class="fab large">CV</a>
+                        </div>
+                    </div>
                 </div>
             </div>
     </section>
-
-    <!-- services section-->
-    <section id="services">
+    
+    <!-- blog section-->
+    <section id="blog">
         <div class="container">
-            <h1 class="text-center">Skills</h1>
+            <h1 class="text-center">Blog</h1>
             <div class="row">
+                <h3 class="text-center">Coming Soon</h3>
+                {% for post in collections.post %}
                 <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-code"></i>
-                            <h4 class="card-title mt-3">Programming</h4>
-                            <p class="card-text mt-3">I began programming 12 years ago, and have loved it ever since. Languages that I've used during internships, school, and freelance work include: Typescript, Python, OCaml, Java, C#, Scala, and most recently Rust.
-                            </p>
-                        </div>
-                    </div>  
+                    <a href="{{ post.url }}">
+                        <div class="card article">
+                            <div class="card-body">
+                                <i class="fas icon fa-{{ post.data.topic }}"></i>
+                                <h4 class="card-title mt-3">{{ post.data.title }}</h4>
+                                <p class="card-text mt-3">{{ post.templateContent }}</p>
+                            </div>
+                        </div>  
+                    </a>
                 </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class="fas servicesIcon fa-plus"></i>
-                            <h4 class="card-title mt-3">Math</h4>
-                            <p class="card-text mt-3">I love math! I've tutored clients for hundreds of hours over the last decade at a variety of levels, placed on a national math test, and worked on a variety of toy projects and papers in cryptography and beyond that use tools like propositional logic and finite fields.
-                            </p>
-                        </div>
-                    </div>  
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class='fas servicesIcon fa-users'></i>
-                            <h4 class="card-title mt-3">Project Management</h4>
-                            <p class="card-text mt-3">Through managing several projects I’ve developed strong communication and collaboration skills. Besides the projects detailed below, I've served on a consensus-based board of directors, and lived and worked in communities which center responsibility and communication.
-                            </p>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class='fas servicesIcon fa-shield-alt'></i>
-                            <h4 class="card-title mt-3">Privacy & Security</h4>
-                            <p class="card-text mt-3">My grad school studies focused on privacy and security, I've contributed to a paper on configuration management, and attended conferences. More recently my interest has centered on cryptography, differential privacy, and zero-knowledge proofs.
-                            </p>
-                        </div>
-                    </div>  
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class='fas servicesIcon fa-cloud'></i>
-                            <h4 class="card-title mt-3">Cloud</h4>
-                            <p class="card-text mt-3">Much of my work is in the web domain, so I've become skilled in hosting, managing, and otherwise working on the cloud. The primary platform I use is DigitalOcean, but I've also tried AWS, Azure, and HPE. For backend database I work in Postgres.
-                            </p>
-                        </div>
-                    </div>  
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card servicesText">
-                        <div class="card-body">
-                            <i class='fas servicesIcon fa-map'></i>
-                            <h4 class="card-title mt-3">Functional</h4>
-                            <p class="card-text mt-3">In a world where asynchronous task processing is exceedingly commonplace, I've found functional languages and paradigms to be an excellent choice. As much as possible I lean towards functional languages like OCaml and make use of those lessons in my Javascript code.
-                            </p>
-                        </div>
-                    </div>  
-                </div>
+            {% endfor %}
             </div>
         </div>
     </section>
@@ -166,7 +124,7 @@
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/celestial.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/celestial.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Celestial Web-app</h4>
                             <p class="card-text">Over the last 2 years designed a card-game web-app from scratch that is available and in use. Worked with and directed a team of 5 artists, ui designers, audio engineers, and writers to create something cohesive. The tech stack hosting the client, server, and database on Digital Ocean, client code in typescript with OAuth for account management, websockets for persistant connections, server code in python, database managed using Postgres. The project used git as its version control, and can be viewed in full on my github page.</p>
@@ -179,18 +137,19 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/audio.jpg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/audio.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Audio Mixing Application</h4>
                             <p class="card-text">Designed and developed an audio application for a small company that boasted a clean front-end, recorded and analyzed the user's voice using custom audio masking to determine most significant sound ranges, managed low-level audio buffers to ensure seamless audio fading, and played the created audio experience on custom hardware.</p>
-                            <p>One key problem I ran into was ensuring that the high-res mixed track was ready by the time the user finished their selection process so there was no break in their experience. I solved this problem by proposing various adjustments to the user flow, mixing a smaller length of the track so that it would be ready within the necessary timeframe, then starting the full mixing immediately and transitioning between the two, as well as other smaller performance optimizations.</p>
+                            <p class="card-text">One key problem I ran into was ensuring that the high-res mixed track was ready by the time the user finished their selection process so there was no break in their experience. I solved this problem by proposing various adjustments to the user flow, mixing a smaller length of the track so that it would be ready within the necessary timeframe, then starting the full mixing immediately and transitioning between the two, as well as other smaller performance optimizations.</p>
                         </div>
                     </div>
                 </div>
+                
 
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img class="card-img-top" src="images/dne.jpeg" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/dne.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Website Redesign</h4>
                             <p class="card-text">Managed a committee in writing an RFP for a nonprofit organization's website redesign and ensuring that the project went well to completion. The resulting website was a vast improvement and has been vital for the organization to make programming available for their ~600 annual participants over virtual covid times. I coordinated with all stakeholders, wrote an RFP specifying the needs of the project, ran the interview and hiring process, communicated with the design agency (Limus Design) throughout the project, and provided webmaster support for the website once it was live. Used Wordpress and CPanel to host and keep the site up to date.</p>
@@ -201,47 +160,7 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <!-- <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Messaging Service</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Twitter Clone</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Blog App</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
+        </div>
     </section>
 
     <!-- contact section-->
@@ -262,7 +181,7 @@
                         <input type="text" class="form-control mt-3" placeholder="Subject" name="subject">
                         <div class="mb-3 mt-3">
                             <textarea class="form-control" rows="5" id="comment" name="message" placeholder="Message contents"></textarea>
-                            <button type="submit" class="btn btn-success mt-3">Contact Me</button>
+                            <button type="submit" class="btn btn-success mt-3">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -274,20 +193,17 @@
         <div class="container-fluid">
             <!-- social media icons -->
             <div class="social-icons mt-4">
-                <!-- <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> -->
+                <a href="https://www.twitter.com/kai_geffen" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/kai-geffen/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/KaiGeffen/" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="Resume.pdf" target="_blank" class="footer_text">CV</a>
+                <a href="Resume.pdf" target="_blank" class="fab">CV</a>
             </div>
-            <a href="https://www.francescamagnani.com/" target="_blank" class="footer_text" style="text-align:right;">Photo Credits</a>
+            <a href="https://www.francescamagnani.com/" target="_blank" class="fab" style="text-align:right;">Photo Credits</a>
         </div>
-        
     </footer>
 
     <!-- load javascript after loading all html content -->
-    <script src="script/script.js"></script>
+    <script src="/script/script.js"></script>
 </body>
 
 </html>
