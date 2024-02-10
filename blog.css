@@ -1,7 +1,7 @@
 /* Links */
 .blog-image {
     height:100vh;
-    background: url('images/hero.jpg');
+    background: url('assets/hero.jpg');
     background-size:cover;
     background-attachment: fixed;
     background-position-x: center;
@@ -51,7 +51,7 @@ a:active { text-decoration: none; }
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('images/hero.jpg');
+    background: url('assets/hero.jpg');
     background-size:cover;
     background-attachment: fixed;
     background-position-x: center;

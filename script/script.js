@@ -37,4 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
         titleElement.style.marginTop = '40px';
         titleElement.style.opacity = 1;
     }, 10);
+
+    // Ensure that video plays
+    document.addEventListener("click", function() {
+        document.querySelectorAll('video').forEach(video => {
+            video.play()
+        })
+    })
 });
+
+
