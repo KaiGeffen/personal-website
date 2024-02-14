@@ -5,6 +5,7 @@ html {
 body {
     font-family: 'Lato', serif;
     font-size: 20px;
+    background-color: #808080;
 }
 .btn.btn-success {
     background-color: #1a1b1f;
@@ -28,6 +29,9 @@ a:hover {
 /* Don't underline or decorate link text */
 a:link { text-decoration: none; }
 
+section {
+    background-color: white;
+}
 /* Cause the navbar to jump above the section so that the navbar won't cut off the title */
 section::before {
     content: "";
