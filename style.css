@@ -138,7 +138,6 @@ input:focus, select:focus, textarea:focus {
 }
 .social-icons {
     font-size: 36px;
-    cursor: pointer;
 }
 .fab, .link-text {
     color: #000000;
