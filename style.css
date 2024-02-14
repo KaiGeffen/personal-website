@@ -141,6 +141,7 @@ input:focus, select:focus, textarea:focus {
 }
 .fab, .link-text {
     color: #000000;
+    cursor: pointer;
 }
 .fab:hover, .link-text:hover {
     color: #FABD5D;
