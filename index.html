@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Kai Geffen</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Icon -->
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  <!-- bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Kai Geffen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" />
-
+    
     <!-- linking css file -->
     <link rel="stylesheet" href="/style.css">
-  
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -54,14 +54,14 @@
     <section class="bgimage" id="home">
         <div class="container-fluid">
             <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                <h2 class="hero_title">Kai Geffen</h2>
-                <p class="hero_subtitle">software engineer</p>
-            </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                    <h2 class="hero_title">Kai Geffen</h2>
+                    <p class="hero_subtitle">software engineer</p>
+                </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Bio section-->
     <section id="bio">
         <div class="container mt-4 pt-4">
@@ -70,7 +70,7 @@
                 <div class="col-lg-4 mt-3">
                     <img src="/assets/bio.jpg" class= "imageBioPage" alt="">
                 </div>
-
+                
                 <div class="col-lg-8 mt-3">
                     <p>Versatile and determined software engineer with 5 years of client and industry experience. Enthusiastic learner who consistently explores new technologies and frameworks to continue improving as a developer, collaborator, and engineer. Brings years of experience in managing, facilitating, and communicating with clients and peers in order to achieve excellence in software solutions.
                     </p>
@@ -84,143 +84,136 @@
                     </div>
                 </div>
             </div>
-    </section>
-    
-    <!-- blog section-->
-    <!-- <section id="blog">
-        <div class="container">
-            <h1 class="text-center">Blog</h1>
-            <div class="row">
-                <h3 class="text-center">Coming Soon</h3>
-                {% for post in collections.post %}
-                <div class="col-lg-4 mt-4">
-                    <a href="{{ post.url }}">
-                        <div class="card article">
+        </section>
+        
+        <!-- blog section-->
+        <!-- <section id="blog">
+            <div class="container">
+                <h1 class="text-center">Blog</h1>
+                <div class="row">
+                    <h3 class="text-center">Coming Soon</h3>
+                    {% for post in collections.post %}
+                    <div class="col-lg-4 mt-4">
+                        <a href="{{ post.url }}">
+                            <div class="card article">
+                                <div class="card-body">
+                                    <i class="fas icon fa-{{ post.data.topic }}"></i>
+                                    <h4 class="card-title mt-3">{{ post.data.title }}</h4>
+                                    <p class="card-text mt-3">{{ post.templateContent }}</p>
+                                </div>
+                            </div>  
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section> -->
+        
+        <!-- portfolio section-->
+        <section id="portfolio">
+            <div class="container mt-3">
+                <h1 class="text-center">Portfolio</h1>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card portfolioContent mt-4">
+                            <video src="/assets/celestial.mp4" alt="Celestial animation" style="width:100%" loop></video>
                             <div class="card-body">
-                                <i class="fas icon fa-{{ post.data.topic }}"></i>
-                                <h4 class="card-title mt-3">{{ post.data.title }}</h4>
-                                <p class="card-text mt-3">{{ post.templateContent }}</p>
+                                <h4 class="card-title">Celestial Web-app</h4>
+                                <p class="card-subtitle">
+                                    <a href="https://celestialtcg.com">website</a> /
+                                    <a href="https://github.com/KaiGeffen/CelestialTS">client code</a> /
+                                    <a href="https://github.com/KaiGeffen/Celestial">server code</a>
+                                </p>
+                                <p class="card-text">Over the last 2 years designed a card-game web-app from scratch that is available and in use. Worked with and directed a team of 5 artists, ui designers, audio engineers, and writers to create something cohesive. The tech stack hosting the client, server, and database on Digital Ocean, client code in typescript with OAuth for account management, websockets for persistant connections, server code in python, database managed using Postgres. The project used git as its version control, and can be viewed in full on my github page.</p>
                             </div>
-                        </div>  
-                    </a>
-                </div>
-            {% endfor %}
-            </div>
-        </div>
-    </section> -->
-
-    <!-- portfolio section-->
-    <section id="portfolio">
-        <div class="container mt-3">
-            <h1 class="text-center">Portfolio</h1>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card portfolioContent mt-4">
-                        <video src="/assets/celestial.mp4" alt="Celestial animation" style="width:100%" loop></video>
-                        <div class="card-body">
-                            <h4 class="card-title">Celestial Web-app</h4>
-                            <p class="card-subtitle">
-                                <a href="https://celestialtcg.com">website</a> /
-                                <a href="https://github.com/KaiGeffen/CelestialTS">client code</a> /
-                                <a href="https://github.com/KaiGeffen/Celestial">server code</a>
-                            </p>
-                            <p class="card-text">Over the last 2 years designed a card-game web-app from scratch that is available and in use. Worked with and directed a team of 5 artists, ui designers, audio engineers, and writers to create something cohesive. The tech stack hosting the client, server, and database on Digital Ocean, client code in typescript with OAuth for account management, websockets for persistant connections, server code in python, database managed using Postgres. The project used git as its version control, and can be viewed in full on my github page.</p>
+                        </div>
+                        <div class="card portfolioContent mt-4">
+                            <!-- <img class="card-img-top" src="/assets/somalive.jpg" alt="Card image" style="width:100%"> -->
+                            <div class="card-body">
+                                <h4 class="card-title">Audio Mixing Application</h4>
+                                <p class="card-text">Designed and developed an audio application for a small company that boasted a clean front-end, recorded and analyzed the user's voice using custom audio masking to determine most significant sound ranges, managed low-level audio buffers to ensure seamless audio fading, and played the created audio experience on custom hardware.</p>
+                                <p class="card-text">One key problem I ran into was ensuring that the high-res mixed track was ready by the time the user finished their selection process so there was no break in their experience. I solved this problem by proposing various adjustments to the user flow, mixing a smaller length of the track so that it would be ready within the necessary timeframe, then starting the full mixing immediately and transitioning between the two, as well as other smaller performance optimizations.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card portfolioContent mt-4">
-                        <!-- <img class="card-img-top" src="/assets/somalive.jpg" alt="Card image" style="width:100%"> -->
-                        <div class="card-body">
-                            <h4 class="card-title">Audio Mixing Application</h4>
-                            <p class="card-text">Designed and developed an audio application for a small company that boasted a clean front-end, recorded and analyzed the user's voice using custom audio masking to determine most significant sound ranges, managed low-level audio buffers to ensure seamless audio fading, and played the created audio experience on custom hardware.</p>
-                            <p class="card-text">One key problem I ran into was ensuring that the high-res mixed track was ready by the time the user finished their selection process so there was no break in their experience. I solved this problem by proposing various adjustments to the user flow, mixing a smaller length of the track so that it would be ready within the necessary timeframe, then starting the full mixing immediately and transitioning between the two, as well as other smaller performance optimizations.</p>
+                    <div class="col-lg-6">
+                        <div class="card mt-4">
+                            <video src="/assets/oxide.mp4" alt="Oxide package-manager animation" style="width:100%" loop></video>
+                            <div class="card-body">
+                                <h4 class="card-title">IronMill: Zero-Knowledge DevOps</h4>
+                                <p class="card-subtitle">
+                                    <a href="https://www.ironmill.xyz/">website</a> /
+                                    <a href="https://github.com/IronMill-xyz/ironmill-oxide">public code</a>
+                                </p>
+                                <p class="card-text">
+                                    Lead the team in designing high-level scope for our project, creating diagrams and specifications, breaking it down into actionable tasks, and ensuring best-practices were used throughout.
+                                </p>
+                                <p class="card-text">
+                                    Attended industry-leading conferences and worked with key investors and partners to refine product-market fit.
+                                </p>
+                                <p class="card-text">
+                                    Researched and advised on the technical aspects of Zero-Knowledge Proofs and where they could deliver the most value to our audience.
+                                </p>
+                                <p class="card-text">
+                                    Executed end-to-end development in both Python and Typescript for both frontend and backend.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card mt-4">
-                        <video src="/assets/oxide.mp4" alt="Oxide package-manager animation" style="width:100%" loop></video>
-                        <div class="card-body">
-                            <h4 class="card-title">IronMill: Zero-Knowledge DevOps</h4>
-                            <p class="card-subtitle">
-                                <a href="https://www.ironmill.xyz/">website</a> /
-                                <a href="https://github.com/IronMill-xyz/ironmill-oxide">public code</a>
-                            </p>
-                            <p class="card-text">
-                                Lead the team in designing high-level scope for our project, creating
-                                diagrams and specifications, breaking it down into actionable tasks, and
-                                ensuring best-practices were used throughout.
-                            </p>
-                            <p class="card-text">
-                                Attended industry-leading conferences and worked with key investors
-                                and partners to refine product-market fit.
-                            </p>
-                            
-                            <p class="card-text">
-                                Researched and advised on the technical aspects of Zero-Knowledge
-                                Proofs and where they could deliver the most value to our audience.
-                            </p>
-                            
-                            <p class="card-text">
-                                Executed end-to-end development in both Python and Typescript for
-                                both frontend and backend.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card mt-4">
-                        <img class="card-img-top" src="/assets/dne.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Website Redesign</h4>
-                            <p class="card-subtitle">
-                                <a href="https://www.dne.org/">website</a>
-                            </p>
-                            <p class="card-text">Managed a committee in writing an RFP for a nonprofit organization's website redesign and ensuring that the project went well to completion. The resulting website was a vast improvement and has been vital for the organization to make programming available for their ~600 annual participants over virtual covid times. I coordinated with all stakeholders, wrote an RFP specifying the needs of the project, ran the interview and hiring process, communicated with the design agency (Limus Design) throughout the project, and provided webmaster support for the website once it was live. Used Wordpress and CPanel to host and keep the site up to date.</p>
+                        <div class="card mt-4">
+                            <img class="card-img-top" src="/assets/dne.jpg" alt="Card image" style="width:100%">
+                            <div class="card-body">
+                                <h4 class="card-title">Website Redesign</h4>
+                                <p class="card-subtitle">
+                                    <a href="https://www.dne.org/">website</a>
+                                </p>
+                                <p class="card-text">Managed a committee in writing an RFP for a nonprofit organization's website redesign and ensuring that the project went well to completion. The resulting website was a vast improvement and has been vital for the organization to make programming available for their ~600 annual participants over virtual covid times. I coordinated with all stakeholders, wrote an RFP specifying the needs of the project, ran the interview and hiring process, communicated with the design agency (Limus Design) throughout the project, and provided webmaster support for the website once it was live. Used Wordpress and CPanel to host and keep the site up to date.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- contact section-->
-    <section id="contact">
-        <div class="container mt-3 contactContent">
-            <h1 class="text-center">Contact Me</h1>
-
-            <div  class="row mt-4">
-                <div class="col-lg-12" align="center">
-                    <div class="col-lg-6" align="center">
-                        <!-- form fields -->
-                        <form
-                        action="https://formspree.io/f/xeqwznkj"
-                        method="POST"
-                        >
-                        <input type="text" class="form-control mt-3" placeholder="Name" name="name">
-                        <input type="email" class="form-control mt-3" placeholder="Email"  name="email">
-                        <div class="mb-3 mt-3">
-                            <textarea class="form-control" rows="5" id="comment" name="message" placeholder="Message"></textarea>
-                            <button type="submit" class="btn btn-success mt-3">Submit</button>
-                        </div>
-                    </form>
+        </section>
+        
+        <!-- contact section-->
+        <section id="contact">
+            <div class="container mt-3 contactContent">
+                <h1 class="text-center">Contact Me</h1>
+                
+                <div  class="row mt-4">
+                    <div class="col-lg-12" align="center">
+                        <div class="col-lg-6" align="center">
+                            <!-- form fields -->
+                            <form
+                            action="https://formspree.io/f/xeqwznkj"
+                            method="POST"
+                            >
+                            <input type="text" class="form-control mt-3" placeholder="Name" name="name">
+                            <input type="email" class="form-control mt-3" placeholder="Email"  name="email">
+                            <div class="mb-3 mt-3">
+                                <textarea class="form-control" rows="5" id="comment" name="message" placeholder="Message"></textarea>
+                                <button type="submit" class="btn btn-success mt-3">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- footer section-->
-    <footer id="footer">
-        <div class="container-fluid">
-            <!-- social media icons -->
-            <div class="social-icons mt-4">
-                <a href="https://www.twitter.com/kai_geffen" target="_blank"><i class="fab fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/kai-geffen/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/KaiGeffen/" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="Resume.pdf" target="_blank" class="link-text">CV</a>
+        </section>
+        <!-- footer section-->
+        <footer id="footer">
+            <div class="container-fluid">
+                <!-- social media icons -->
+                <div class="social-icons mt-4">
+                    <a href="https://www.twitter.com/kai_geffen" target="_blank"><i class="fab fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/kai-geffen/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/KaiGeffen/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="Resume.pdf" target="_blank" class="link-text">CV</a>
+                </div>
+                <a href="https://www.francescamagnani.com/" target="_blank" class="link-text" style="text-align:right;">Photo Credits</a>
             </div>
-            <a href="https://www.francescamagnani.com/" target="_blank" class="link-text" style="text-align:right;">Photo Credits</a>
-        </div>
-    </footer>
-
-    <!-- load javascript after loading all html content -->
-    <script src="/script/script.js"></script>
-</body>
-
-</html>
+        </footer>
+        
+        <!-- load javascript after loading all html content -->
+        <script src="/script/script.js"></script>
+    </body>
+    
+    </html>
