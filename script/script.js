@@ -39,11 +39,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 10);
 
     // Ensure that video plays
-    document.addEventListener("click", function() {
+    function ensureVideosPlaying() {
         document.querySelectorAll('video').forEach(video => {
             video.play()
         })
-    })
+    }
+
+    document.addEventListener("click", ensureVideosPlaying)
+    // Scrolling on mobile, in case they don't make a discrete click
+    document.addEventListener("touchmove", ensureVideosPlaying)
 });
 
 
