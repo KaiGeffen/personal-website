@@ -91,7 +91,6 @@
             <div class="container">
                 <h1 class="text-center">Blog</h1>
                 <div class="row">
-                    <h3 class="text-center">Coming Soon</h3>
                     {% for post in collections.post %}
                     <div class="col-lg-4 mt-4">
                         <a href="{{ post.url }}">
@@ -99,7 +98,7 @@
                                 <div class="card-body">
                                     <i class="fas icon fa-{{ post.data.topic }}"></i>
                                     <h4 class="card-title mt-3">{{ post.data.title }}</h4>
-                                    <p class="card-text mt-3">{{ post.templateContent }}</p>
+                                    <p class="card-text mt-3">{{ post.data.abstract }}</p>
                                 </div>
                             </div>  
                         </a>
@@ -136,7 +135,7 @@
                             </div>
                         </div>
                         <div class="card portfolioContent mt-4">
-                            <!-- <img class="card-img-top" src="/assets/somalive.jpg" alt="Card image" style="width:100%"> -->
+                            <img class="card-img-top" src="/assets/somalive.jpg" alt="Card image" style="width:100%">
                             <div class="card-body">
                                 <h4 class="card-title">Audio Mixing Application</h4>
                                 <p class="card-text">Designed and developed an audio application for a small company that boasted a clean front-end, recorded and analyzed the user's voice using custom audio masking to determine most significant sound ranges, managed low-level audio buffers to ensure seamless audio fading, and played the created audio experience on custom hardware.</p>
