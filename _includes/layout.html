@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="/blog.css">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <!-- MathJax for displaying Latex -->
+    <script type="text/javascript" src="/mathjax/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -37,18 +39,18 @@
             <!-- Share -->
             <p class="bold-text">Share this entry</p>
 
-            <a href="https://twitter.com/share?text={{ title }}&amp;url={{ url }}{{ page.url }}" target="_blank">
+            <a href="https://twitter.com/share?text={{ abstract }}&amp;url={{ url }}{{ page.url }}" target="_blank">
                 <i class="fab fa-twitter fa-3x"></i>
             </a>
-            <a href="https://www.facebook.com/sharer.php?u={{ url }}{{ page.url }}&amp;t={{ title }}" target="_blank">
+            <a href="https://www.facebook.com/sharer.php?u={{ url }}{{ page.url }}" target="_blank">
                 <i class="fab fa-facebook fa-3x"></i>
             </a>
-            <a href="https://linkedin.com/shareArticle?mini=true&amp;title={{ title }}&amp;url={{ url }}{{ page.url}}" target="_blank">
+            <a href="https://linkedin.com/shareArticle?mini=true&amp;title={{ title }}&amp;shareCommentary={{ abstract }}&amp;url={{ url }}{{ page.url}}" target="_blank">
                 <i class="fab fa-linkedin fa-3x"></i>
             </a>
-            <a href="https://reddit.com/submit?url={{ url }}{{ page.url }}&amp;title={{ title }}" target="_blank">
+            <!-- <a href="https://reddit.com/submit?url={{ url }}{{ page.url }}&amp;title={{ title }}" target="_blank">
                 <i class="fab fa-reddit-alien fa-3x"></i>
-            </a>
+            </a> -->
         </div>
     </div>
 
