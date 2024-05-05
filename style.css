@@ -181,3 +181,8 @@ input:focus, select:focus, textarea:focus {
     padding-bottom: 0.5rem;
     z-index: 1; /* Ensure the text content appears above the background */
 }
+.article-image {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
