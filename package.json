@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website, with blog.",
   "scripts": {
-    "build": "npx @11ty/eleventy",
+    "build": "npm install; npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve --port=8000",
     "dev": "npx @11ty/eleventy --serve --port=8080"
   },
