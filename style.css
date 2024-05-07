@@ -186,3 +186,11 @@ input:focus, select:focus, textarea:focus {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+/* Style for code blocks */
+pre {
+    background-color: black; /* Set background color to black */
+    color: limegreen; /* Set text color to white */
+    padding: 1rem; /* Add padding for readability */
+    border-radius: 0.5em; /* Add border radius for rounded corners */
+    overflow-x: auto; /* Enable horizontal scrolling for long lines */
+}

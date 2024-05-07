@@ -117,9 +117,9 @@ Other systems, such as static analysis to determine whether your types are as ti
 (* Example of a balanced binary tree in ocaml, using Peano numbers for depth *)
 type (‘depth, ‘a) bbtree =
 | Leaf : (zero, ‘a) bbtree
-| Branch : ‘a -> (‘depth, ‘a) bbtree -> (‘depth, ‘a) bbtree -> (‘depth succ, ‘a) bbtree
-| Branch : ‘a -> (‘depth, ‘a) bbtree -> (‘depth succ, ‘a) bbtree -> (‘depth succ succ, ‘a) bbtree
-| Branch : ‘a -> (‘depth succ, ‘a) bbtree -> (‘depth, ‘a) bbtree -> (‘depth succ succ, ‘a) bbtree
+| BranchBalanced : ‘a -> (‘depth, ‘a) bbtree -> (‘depth, ‘a) bbtree -> (‘depth succ, ‘a) bbtree
+| BranchMoreLeft : ‘a -> (‘depth, ‘a) bbtree -> (‘depth succ, ‘a) bbtree -> (‘depth succ succ, ‘a) bbtree
+| BranchMoreRight : ‘a -> (‘depth succ, ‘a) bbtree -> (‘depth, ‘a) bbtree -> (‘depth succ succ, ‘a) bbtree
 ```
 
 ***
