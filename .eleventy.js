@@ -3,7 +3,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 
 module.exports = function eleventyConfig(config) {
     // Enables MathJax to render Latex
-    // config.addPlugin(mathjaxPlugin)
+    config.addPlugin(mathjaxPlugin)
 
     // Enables code syntax highlighting
     config.addPlugin(syntaxHighlight)
