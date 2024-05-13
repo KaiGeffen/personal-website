@@ -108,8 +108,8 @@ section::after {
     width: 100%;
 }
 
-/* Blog */
-#blog {
+/* Event, Blog */
+#blog, #event {
     background-color: whitesmoke;
 }
 .article {
