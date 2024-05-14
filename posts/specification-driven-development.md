@@ -114,12 +114,15 @@ We benefit greatly from type-checkers being supported, in-use, and understood by
 Other systems, such as static analysis to determine whether your types are as tight as they could be, can further support this step of development. This also draws from existing well-established theory around sets and types.
 
 ```ocaml
+type zero = unit
+type `n succ = unit -> `n
+
 (* Example of a balanced binary tree in ocaml, using Peano numbers for depth *)
-type (‘depth, ‘a) bbtree =
-| Leaf : (zero, ‘a) bbtree
-| BranchBalanced : ‘a -> (‘depth, ‘a) bbtree -> (‘depth, ‘a) bbtree -> (‘depth succ, ‘a) bbtree
-| BranchMoreLeft : ‘a -> (‘depth, ‘a) bbtree -> (‘depth succ, ‘a) bbtree -> (‘depth succ succ, ‘a) bbtree
-| BranchMoreRight : ‘a -> (‘depth succ, ‘a) bbtree -> (‘depth, ‘a) bbtree -> (‘depth succ succ, ‘a) bbtree
+type (`depth, `a) bbtree =
+| Leaf : (zero, `a) bbtree
+| BranchBalanced : `a -> (`depth, `a) bbtree -> (`depth, `a) bbtree -> (`depth succ, `a) bbtree
+| BranchMoreLeft : `a -> (`depth, `a) bbtree -> (`depth succ, `a) bbtree -> (`depth succ succ, `a) bbtree
+| BranchMoreRight : `a -> (`depth succ, `a) bbtree -> (`depth, `a) bbtree -> (`depth succ succ, `a) bbtree
 ```
 
 ***
