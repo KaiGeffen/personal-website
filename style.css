@@ -92,6 +92,7 @@ section::after {
     margin-bottom: 0.5rem;
 }
 .card-text {
+    height: 200px;
     overflow: hidden;
 }
 .icon {
