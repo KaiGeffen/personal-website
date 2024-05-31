@@ -1,12 +1,12 @@
 ---
 title: GADTs
 topic: code
-abstract: TODO What is this
+abstract: Explaining common patterns and uses for Generalized Algebraic Data Types in OCaml.
 ---
 # Hints
-This article describes Generalized Algebraic Datatypes (GADTs) through several examples of common patterns. 
+This article describes Generalized Algebraic Data Types (GADTs) through several examples of common patterns. 
 
-Familiarity with OCAML, or at least another similar functional language (Haskell, Scala, SML, F#) is necessary. Understanding set theory and abstract algebra is also useful.
+Familiarity with OCaml, or at least another similar functional language (Haskell, Scala, SML, F#) is necessary. Understanding set theory and abstract algebra is also useful.
 
 Some helpful hints to get you started are:
 
