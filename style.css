@@ -54,13 +54,27 @@ section::after {
 #home::before { content: none; }
 
 /* Hero */
-.bgimage {
-    height:100vh;
-    background: url('assets/hero.jpg');
-    background-size:cover;
-    background-attachment: fixed;
-    background-position-x: center;
-    position:relative;
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+/* Adjust for landscape mode */
+@media (orientation: landscape) {
+    .hero-image {
+        width: 100%;
+        height: auto;
+        min-height: 100vh; /* Ensure the image takes up at least the full height of the viewport */
+    }
+}
+@media (orientation: portrait) {
+    .hero-image {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: auto;
+        height: 100%;
+    }
 }
 .hero-text {
     text-align: center;
