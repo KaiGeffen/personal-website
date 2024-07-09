@@ -13,6 +13,5 @@ module.exports = function eleventyConfig(config) {
     // config.addPassthroughCopy("blog.css")
 	config.addPassthroughCopy("assets")
     config.addPassthroughCopy("script")
-    config.addPassthroughCopy("Kai Geffen Resume.pdf")
     config.addGlobalData("url", "https://kaigeffen.com")
 };
